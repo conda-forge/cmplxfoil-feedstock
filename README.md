@@ -1,11 +1,11 @@
-About cmplxfoil
-===============
+About cmplxfoil-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmplxfoil-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mdolab/CMPLXFOIL/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmplxfoil-feedstock/blob/main/LICENSE.txt)
 
 Summary: CMPLXFOIL is a version of Mark Drela's XFOIL code with the GUI features removed.
 
