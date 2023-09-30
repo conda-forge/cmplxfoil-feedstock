@@ -23,7 +23,8 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('fortran') }}
     - make
-    - meson
+    - meson  # [py>=312]
+    - numpy  # [py>=312]
   host:
     - python
     - pip
