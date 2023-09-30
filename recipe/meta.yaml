@@ -10,6 +10,7 @@ source:
   sha256: fb22ea08adf64781abadd9ae3abaa476a937509b7f37e4d0aa5ddd919c0abef3
   patches:
     - FC-config-linux.patch
+    - f2py-no-fcompiler.patch
 
 build:
   number: 2
