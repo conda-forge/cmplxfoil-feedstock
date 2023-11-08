@@ -10,9 +10,10 @@ source:
   sha256: fb22ea08adf64781abadd9ae3abaa476a937509b7f37e4d0aa5ddd919c0abef3
   patches:
     - FC-config-linux.patch
+    - f2py-no-fcompiler.patch
 
 build:
-  number: 1
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -22,6 +23,8 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('fortran') }}
     - make
+    - meson  # [py>=312]
+    - numpy  # [py>=312]
   host:
     - python
     - pip

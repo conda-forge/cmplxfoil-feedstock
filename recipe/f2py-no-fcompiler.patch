@@ -1,0 +1,26 @@
+diff --git a/src/build/Makefile b/src/build/Makefile
+index 07c6670..15e441a 100644
+--- a/src/build/Makefile
++++ b/src/build/Makefile
+@@ -35,7 +35,7 @@ OFILES=$(f90Files:%.f90=%.o) $(F90Files:%.F90=%.o) $(f77FilesNoDir:%.f=%.o)
+ .PHONY: sources lib
+ 
+ default: lib ../f2py/libcmplxfoil.pyf
+-	$(F2PY)  --fcompiler=$(F2PY_FF90) --f90flags='$(FF90_ALL_FLAGS)' -c -m libcmplxfoil ../f2py/libcmplxfoil.pyf libxfoil.a
++	$(F2PY) --f90flags='$(FF90_ALL_FLAGS)' -c -m libcmplxfoil ../f2py/libcmplxfoil.pyf libxfoil.a
+ 	mv libcmplxfoil.*so ../../cmplxfoil/libcmplxfoil.so
+ 
+ sources: $(OFILES)
+diff --git a/src_cs/build/Makefile b/src_cs/build/Makefile
+index 2b4a66d..d928e33 100644
+--- a/src_cs/build/Makefile
++++ b/src_cs/build/Makefile
+@@ -35,7 +35,7 @@ OFILES=$(f90Files:%.f90=%.o) $(F90Files:%.F90=%.o) $(f77FilesNoDir:%.f=%.o)
+ .PHONY: sources lib
+ 
+ default: lib ../f2py/libcmplxfoil_cs.pyf
+-	$(F2PY)  --fcompiler=$(F2PY_FF90) --f90flags='$(FF90_ALL_FLAGS)' -c -m libcmplxfoil_cs ../f2py/libcmplxfoil_cs.pyf libxfoil_cs.a
++	$(F2PY) --f90flags='$(FF90_ALL_FLAGS)' -c -m libcmplxfoil_cs ../f2py/libcmplxfoil_cs.pyf libxfoil_cs.a
+ 	mv libcmplxfoil_cs.*so ../../cmplxfoil/libcmplxfoil_cs.so
+ 
+ sources: $(OFILES)
