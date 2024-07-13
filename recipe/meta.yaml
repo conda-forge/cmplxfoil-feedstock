@@ -1,5 +1,5 @@
 {% set name = "cmplxfoil" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: cmplxfoil
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/mdolab/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: fb22ea08adf64781abadd9ae3abaa476a937509b7f37e4d0aa5ddd919c0abef3
+  sha256: 25d06904f35cba7f4fd56ea2bb4a29b01593866b695040dac413569568678b56
   patches:
     - FC-config-linux.patch
     - f2py-no-fcompiler.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
     - make
     - meson  # [py>=312]
     - numpy  # [py>=312]
