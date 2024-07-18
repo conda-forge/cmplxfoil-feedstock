@@ -1,5 +1,5 @@
 {% set name = "cmplxfoil" %}
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: cmplxfoil
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mdolab/{{ name|upper }}/archive/v{{ version }}.tar.gz
-  sha256: 25d06904f35cba7f4fd56ea2bb4a29b01593866b695040dac413569568678b56
+  sha256: 1d7a85762bfcad28a23d8d5f160e3793d280f64661e57e368c4a5974d09d590d
   patches:
     - FC-config-linux.patch
     - f2py-no-fcompiler.patch
